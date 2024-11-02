@@ -55,7 +55,7 @@ struct TelegramUserID {
 struct TelegramSettings {
   bool isTelegramOn;
   String botId;
-  std::vector<TelegramUserID> telegramUsers;  // Использование vector для динамического массива
+  std::vector<TelegramUserID> telegramUsers;  
   String lastMessage;
 };
 
@@ -72,7 +72,7 @@ struct NetworkSetting {
 struct WiFiSettings {
   bool isWifiTurnedOn;
   int currentIdNetworkSetting;
-  std::vector<NetworkSetting> networkSettings;  // Использование vector для динамического массива
+  std::vector<NetworkSetting> networkSettings;  
   String ssidAP;
   String passwordAP;
   IPAddress ipAddressAP;
