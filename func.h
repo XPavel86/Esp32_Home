@@ -87,7 +87,7 @@ void handleFileUpload(AsyncWebServerRequest *request, String filename, size_t in
 void downloadAndUpdateFirmware(String url, String fileName) {
     HTTPClient http;
     WiFiClientSecure client;
-    client.setInsecure();  // Использовать небезопасный клиент (для тестирования HTTPS)
+    client.setInsecure();  
 
     http.setTimeout(60000); // Увеличение таймаута до 60 секунд
     http.begin(client, url);
@@ -552,7 +552,7 @@ struct TaskParameters {
 void otaUpdateTask(void * parameter) {
   TaskParameters* params = (TaskParameters*) parameter;
   
-  // Используйте params->filePath и params->fileName в вашей функции обновления
+  //  params->filePath и params->fileName
   Serial.println("Starting firmware update from file: " + params->filePath);
   Serial.println("File name: " + params->fileName);
   
